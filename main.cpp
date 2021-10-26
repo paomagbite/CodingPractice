@@ -1,7 +1,7 @@
 // Observer pattern
-// Version 0.5.0
+// Version 1.0.0
 // Written by Dbeela
-// Needs a big revision hence 1.0 will be written based of this one soon
+// Revised version of the observer pattern, added the missing functionality
 
 #include <iostream>
 #include <vector>
@@ -12,8 +12,6 @@
 //static int observer_id;
 class IObserver {
 public:
-  IObserver() {
-  }
   virtual void update() = 0;
 };
 
@@ -65,12 +63,12 @@ public:
     this->observable = observable;
     //observable->add(this); // This piece of code is really cool but there are instances where this is very undesirable
   }
+
   // implements the update method to get the random number and shout it out.
   void update() override {
     num = this->observable->getRanNum();
     std::cout << "Observer " << id << " reporting in and got number: " << num << "\n";
   }
-
 
 private:
   int id;
@@ -79,7 +77,6 @@ private:
   static int observer_id;
 
   Observable* observable;
-
 };
 
 // I am not sure this must be initilised here...
