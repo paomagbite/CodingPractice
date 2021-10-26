@@ -13,7 +13,7 @@ public:
   virtual void update();
 
 private:
-  static int observer_id = 0;
+  static int observer_id;
 };
 
 // Observable interface
