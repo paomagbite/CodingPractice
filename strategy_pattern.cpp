@@ -36,7 +36,7 @@ public:
   // Function allows for the chainging of flying behavior
   void set_flying_behavior(IFlyingBehavior *iFlyingBehavior)
     {
-        // delete this->iFlyingBehavior_;
+        // delete this->iFlyingBehavior_; // I think this is unecessary.
         this->iFlyingBehavior_ = iFlyingBehavior;
     }
 
@@ -54,11 +54,13 @@ int main () {
 
   // Object must be passed as a reference for Duck to access the flying behavior
   Duck duck1(&iFlyingBehavior);
-  // Duck duck2(&flyingLong);
-  duck1.set_flying_behavior(&flyingLong);
+  Duck duck2(&flyingLong);
 
   duck1.fly();
-  // duck2.fly();
+  duck2.fly();
+
+  duck1.set_flying_behavior(&flyingLong);
+  duck1.fly();
 
   return 0;
 }
