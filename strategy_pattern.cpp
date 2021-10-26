@@ -1,3 +1,12 @@
+// Strategy Pattern Implementation
+// Written by Dbeela
+// Date 26/10/21
+// Version 1.0
+
+// Uses the implementation of ducks and different fly behavior
+// Requires instatioation of the strategy used but will use the right
+// one by pointinf towords the obejct in the code.
+
 
 #include <iostream>
 #include <string>
