@@ -62,6 +62,7 @@ public:
     this->id = observer_id++;
     this->observable = observable;
     //observable->add(this); // This piece of code is really cool but there are instances where this is very undesirable
+                             // however if we know that an observer is always going to be waitnig for a certain change then it is valid
   }
 
   // implements the update method to get the random number and shout it out.
